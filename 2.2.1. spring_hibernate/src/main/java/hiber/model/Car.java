@@ -16,17 +16,15 @@ public class Car {
     @Column(name = "series")
     private int series;
 
-    @OneToOne
-    @JoinColumn(name = "id", unique = true)
+    @OneToOne(mappedBy = "car", fetch = FetchType.LAZY)
     private User user;
 
     public Car() {
     }
 
-    public Car(String model, int series, User user) {
+    public Car(String model, int series) {
         this.model = model;
         this.series = series;
-        this.user = user;
     }
 
     public Long getId() {
