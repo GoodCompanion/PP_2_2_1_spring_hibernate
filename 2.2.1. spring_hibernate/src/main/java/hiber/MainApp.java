@@ -38,6 +38,9 @@ public class MainApp {
         userService.add(user4);
 
         System.out.println(userService.getUserByModelAndSeries("Mitsubishi", 3));
+        System.out.println(userService.getUserByModelAndSeries("BMW", 8));
+        System.out.println(userService.getUserByModelAndSeries("Mercedes-Benz", 2));
+        System.out.println(userService.getUserByModelAndSeries("Chevrolet", 5));
 
         List<User> users = userService.listUsers();
         for (User user : users) {
